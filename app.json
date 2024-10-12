@@ -1,0 +1,75 @@
+{
+    "expo": {
+        "name": "SafeConnect",
+        "slug": "SafeConnect",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "icon": "../assets/images/icon.png",
+        "scheme": "SafeConnect",
+        "userInterfaceStyle": "automatic",
+        "splash": {
+            "image": "../assets/images/splash.png",
+            "resizeMode": "contain",
+            "backgroundColor": "#ffffff"
+
+        },
+        "permissions": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "ios": {
+            "adaptiveIcon": {
+                "foregroundImage": "../assets/images/adaptive-icon.png",
+                "backgroundColor": "#ffffff"
+            },
+
+            "fetch": "http://localhost:5000/api/data",
+
+            "supportsTablet": true,
+            "package": "com.safeconnect",
+            "infoPlist": {
+                "NSLocationWhenInUseUsageDescription": "This app requires access to your location to show it on the map and send your location via SMS.",
+                "NSLocationAlwaysUsageDescription": "This app requires access to your location to always provide location updates.",
+                "NSLocationAlwaysAndWhenInUseUsageDescription": "This app requires access to your location to always provide location updates when in use.",
+                "NSMessageUsageDescription": "This app requires access to send SMS to share your location with contacts.",
+                "NSMicrophoneUsageDescription": "This app requires access to your microphone to record audio."
+
+            }
+
+        },
+        "android": {
+            "adaptiveIcon": {
+                "foregroundImage": "../assets/images/adaptive-icon.png",
+                "backgroundColor": "#ffffff"
+
+            },
+            "fetch": "http://localhost:5000/api/data",
+            "permissions": [
+                "ACCESS_FINE_LOCATION",
+                "ACCESS_COARSE_LOCATION",
+                "RECORD_AUDIO",
+                "WRITE_EXTERNAL_STORAGE"
+            ],
+            "package": "com.safeconnect"
+
+        },
+        "web": {
+            "bundler": "metro",
+            "output": "static",
+            "favicon": "../assets/images/favicon.png",
+            "package": "com.safeconnect"
+
+        },
+        "plugins": [
+            "expo-router", [
+                "expo-location",
+                {
+                    "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+                }
+            ]
+        ],
+        "experiments": {
+            "typedRoutes": true
+        }
+    }
+}

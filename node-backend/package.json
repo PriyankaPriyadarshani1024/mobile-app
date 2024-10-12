@@ -1,0 +1,28 @@
+{
+    "name": "backend",
+    "version": "16.20.2",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "Backend for voice processing and emotion detection",
+    "dependencies": {
+        "express": "^4.18.1",
+        "cors": "^2.8.5",
+        "body-parser": "^1.19.0",
+        "twilio": "^3.75.1",
+        "@tensorflow/tfjs-node": "^3.13.0",
+        "@mapbox/node-pre-gyp": "^1.0.0",
+        "fs": "0.0.1-security",
+        "path": "^0.12.7"
+    },
+    "binary": {
+        "module_name": "tfjs_binding",
+        "module_path": "../node_modules/@tensorflow/tfjs-node/lib/napi-v8/",
+        "host": "https://storage.googleapis.com/tfjs-node/"
+    }
+}
