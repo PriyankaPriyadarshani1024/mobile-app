@@ -29,7 +29,7 @@ loadModel().then(loadedModel => {
     model = loadedModel;
 });
 
-// Twilio configuration
+
 
 
 // Process voice, predict emotion, and send SMS
