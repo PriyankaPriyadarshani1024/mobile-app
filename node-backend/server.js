@@ -30,7 +30,7 @@ loadModel().then(loadedModel => {
 });
 
 // Twilio configuration
-const twilioClient = twilio('AC577f714aa40cdf5b0669c2b685d9178a', 'daef5bdef766119efde8928469a98169');
+
 
 // Process voice, predict emotion, and send SMS
 app.post('/process-voice', async(req, res) => {

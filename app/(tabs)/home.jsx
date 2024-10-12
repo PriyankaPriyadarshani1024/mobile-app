@@ -47,8 +47,7 @@ const loadModel = () => {
   });
 };
 
-const accountSid = 'AC577f714aa40cdf5b0669c2b685d9178a';
-const authToken = 'daef5bdef766119efde8928469a98169';
+
 
 const client = new Twilio(accountSid, authToken);
 
