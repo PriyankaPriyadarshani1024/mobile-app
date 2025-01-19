@@ -31,5 +31,5 @@
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/SafeConnect.git
+git clone (https://github.com/PriyankaPriyadarshani1024/mobile-app.git)
 cd SafeConnect
