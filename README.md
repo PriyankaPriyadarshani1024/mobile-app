@@ -1,52 +1,35 @@
-# Welcome to your Expo app 👋
+# SafeConnect - Women's Safety App
 
+## Overview
 
+**SafeConnect** is a mobile application designed to ensure the safety of women by providing real-time audio streaming and distress signal functionalities. The app captures surrounding sounds or noise in potentially unsafe situations, processes the audio for emotion detection, and sends alerts to emergency contacts. The system differentiates between casual situations (e.g., laughter) and emergency situations (e.g., distress or fear) through emotion analysis, helping in timely intervention.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Features
 
-## Get started
+- **Sign In/Sign Up**: Users can sign in to their accounts or sign up if they don’t have one.
+- **Guardians Management**: Users can add, edit, and delete emergency contacts (guardians) from the app. These contacts will receive alerts when the user is in distress.
+- **Emotion Detection**: The app records audio when the user feels unsafe and analyzes it for signs of distress, using emotion recognition models.
+- **SMS Alerts**: Based on the detected emotion, the app sends an SMS to the user's saved contacts, alerting them with a "I am in danger" message.
+- **Real-Time Notification**: The app gives a 10-second prompt before sending the alert SMS, ensuring that the user has a chance to cancel the alert if it was triggered by accident. If no action is taken, the alert is automatically sent.
 
-1. Install dependencies
+## Tech Stack
 
-   ```bash
-   npm install
-   ```
+- **Frontend**: React Native
+- **Backend**: Python with Appwrite for backend services (user authentication, data storage)
+- **Emotion Detection**: TensorFlow Lite for emotion detection using recorded audio.
+- **Database**: Appwrite for storing user and guardian information.
+- **SMS Sending**: Integrated SMS functionality to send distress alerts.
 
-2. Start the app
+## Installation
 
-   ```bash
-    npx expo start
-   ```
+### Prerequisites
 
-In the output, you'll find options to open the app in a
+- [Node.js](https://nodejs.org/) - Required to run React Native.
+- [Expo](https://expo.dev/) - For building the app.
+- [Appwrite](https://appwrite.io/) - To handle user authentication and manage database operations.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### Clone the Repository
 
 ```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+git clone https://github.com/yourusername/SafeConnect.git
+cd SafeConnect
